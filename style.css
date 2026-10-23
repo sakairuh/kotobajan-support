@@ -1,0 +1,27 @@
+:root {
+  --bg: #1d1915;
+  --card: #2a241e;
+  --text: #f3ead7;
+  --muted: #b9ad95;
+  --accent: #f4d27a;
+  --line: rgb(214 180 106 / 0.35);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+header { margin-bottom: 24px; }
+h1 { font-size: 1.6rem; margin: 0; color: var(--accent); }
+h2 { font-size: 1.2rem; color: var(--accent); margin-top: 2em; }
+section.lang { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 8px 24px 24px; margin-top: 24px; }
+.updated, footer, .sub { color: var(--muted); font-size: 0.9rem; }
+a { color: var(--accent); }
+nav { margin-top: 8px; }
+li { margin: 0.2em 0; }
+/* 見出しの後半（プライバシーポリシーなど）は、途中で折り返さずにまとめて次の行へ */
+h1 span { display: inline-block; }
