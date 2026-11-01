@@ -15,11 +15,11 @@
 </header>
 
 <section class="lang" lang="ja">
-<p class="updated">制定日：2026年10月24日</p>
+<p class="updated">制定日：2026年10月24日　改定日：2026年11月1日</p>
 <p>「ことば雀」（以下「本アプリ」）は、個人開発者の Ryohei Sakai（以下「開発者」）が提供する、ひらがなの牌で単語を作る麻雀ゲームです。本アプリにおける情報の取り扱いについて、以下のとおり定めます。</p>
 
 <h2>1. 開発者が収集する情報</h2>
-<p>開発者は、氏名、メールアドレス、住所、位置情報、写真など、利用者を特定できる情報を収集しません。アカウントの登録もありません。開発者のサーバーに情報が送られることもありません。</p>
+<p>開発者は、氏名、メールアドレス、住所、位置情報、写真など、利用者を特定できる情報を収集しません。アカウントの登録もありません。開発者のサーバーに送られるのは、次の「3. 今日の二十手の順位表」に書いた情報だけです。</p>
 
 <h2>2. 端末の中に保存する情報</h2>
 <p>本アプリは、遊ぶために必要な次の情報を、お使いの端末の中にだけ保存します。</p>
@@ -28,10 +28,23 @@
   <li>その日に遊んだ回数と、広告を見て得た回数</li>
   <li>購入済みかどうか</li>
   <li>設定（牌の字の書体、音、振動、自動の操作）と、遊び方を表示したかどうか</li>
+  <li>順位表に使う端末ごとの番号・名前・称号</li>
 </ul>
 <p>本アプリを削除すると、これらの情報はすべて端末から消去されます。</p>
 
-<h2>3. 広告（Google AdMob）</h2>
+<h2>3. 今日の二十手の順位表</h2>
+<p>本アプリの「今日の二十手」では、その日の1回目を終えて名前を決めると、全プレイヤーの順位表に載ります。このとき本アプリは、開発者のサーバー（Cloudflare, Inc. のサービス「Cloudflare Workers」）に次の情報を送ります。</p>
+<ul>
+  <li>端末ごとの番号（本アプリが無作為に作ったもので、端末や利用者を特定するものではありません）</li>
+  <li>順位表に出す名前（本アプリの単語から2つ選んだもの）と、称号（取った実績から選んだもの）</li>
+  <li>その日の手の並び（どの牌とどの牌を入れ替えたか）と、遊んだ日付</li>
+  <li>本アプリの辞書の版</li>
+</ul>
+<p>サーバーは、手の並びから点と作った語を数え直して、順位表に載せます。名前・称号・点・作った語・続けて載った日数は、順位表を開いたほかの利用者にも表示されます（作った語は、その日が終わってから表示します）。名前を決めるまでは、名前と手の並びは送りません（順位表を開いたときは、表を出すために端末ごとの番号と日付だけを送ります）。</p>
+<p>通信のとき、Cloudflare は IP アドレスなどの通信の情報を受け取ることがあります。開発者は、IP アドレスを順位表の記録に保存しません。Cloudflare による情報の取り扱いは、<a href="https://www.cloudflare.com/ja-jp/privacypolicy/">Cloudflare のプライバシーポリシー</a> をご覧ください。</p>
+<p>順位表の記録の削除を希望する場合は、順位表に出した名前と、載った日を添えて、下のお問い合わせ先までご連絡ください。</p>
+
+<h2>4. 広告（Google AdMob）</h2>
 <p>本アプリは、利用者が「広告を見て1局遊ぶ」を選んだときに、Google LLC が提供する広告配信サービス「Google AdMob」の動画広告を表示します。そのため、本アプリは起動時に Google の広告の仕組み（Google Mobile Ads SDK）を準備し、広告を読み込みます。このとき Google は、IP アドレス、端末と OS の種類、本アプリの情報、広告の表示や操作の記録、不具合の記録などを受け取ることがあります。</p>
 <ul>
   <li>本アプリは、利用者一人ひとりに合わせない広告（パーソナライズしない広告）を求めます。</li>
@@ -40,33 +53,33 @@
 </ul>
 <p>Google による情報の取り扱いは、<a href="https://policies.google.com/technologies/partner-sites?hl=ja">Google のパートナーのサイトやアプリでの情報の使用</a> と <a href="https://policies.google.com/privacy?hl=ja">Google のプライバシーポリシー</a> をご覧ください。</p>
 
-<h2>4. アプリ内課金</h2>
+<h2>5. アプリ内課金</h2>
 <p>買い切り（遊び放題）の購入と購入の復元は、Apple の App Store を通じて行われます。この手続きで扱われる情報は、Apple のプライバシーポリシーに従って Apple が取り扱います。開発者が支払いの情報を受け取ることはありません。</p>
 
-<h2>5. 単語の報告と外部のサイト</h2>
+<h2>6. 単語の報告と外部のサイト</h2>
 <p>本アプリの「単語を報告」は、GitHub（GitHub, Inc. のサービス）のページを開きます。報告の内容は、利用者が GitHub で送信したときに公開され、GitHub のプライバシーポリシーに従って取り扱われます。本アプリの中には、出典や単語データの公開先など、外部の Web サイトへのリンクがあります。</p>
 
-<h2>6. カメラ・マイク・写真・位置情報</h2>
+<h2>7. カメラ・マイク・写真・位置情報</h2>
 <p>本アプリは、カメラ、マイク、写真、位置情報を使用しません。</p>
 
-<h2>7. お子さまのプライバシー</h2>
+<h2>8. お子さまのプライバシー</h2>
 <p>本アプリは、お子さまを主な対象としたアプリではありません。開発者が、お子さまから意図して情報を集めることはありません。</p>
 
-<h2>8. このポリシーの変更</h2>
+<h2>9. このポリシーの変更</h2>
 <p>このポリシーを変更する場合は、このページで変更後の内容と日付をお知らせします。</p>
 
-<h2>9. お問い合わせ</h2>
+<h2>10. お問い合わせ</h2>
 <p>本アプリの情報の取り扱いについてのお問い合わせは、次の連絡先までお願いします。<br>
 Ryohei Sakai：<a href="mailto:ryohei.dev.support@gmail.com">ryohei.dev.support@gmail.com</a></p>
 </section>
 
 <section class="lang" lang="en" id="en">
 <h1>Kotoba-jan <span>Privacy Policy</span></h1>
-<p class="updated">Effective date: October 24, 2026</p>
+<p class="updated">Effective date: October 24, 2026 · Last updated: November 1, 2026</p>
 <p>Kotoba-jan (ことば雀, "the App") is a mahjong game played with hiragana tiles, provided by Ryohei Sakai, an individual developer ("the Developer"). This policy explains how the App handles information.</p>
 
 <h2>1. Information the Developer collects</h2>
-<p>The Developer does not collect any information that can identify you, such as your name, email address, address, location, or photos. There is no account registration, and no information is sent to the Developer's servers.</p>
+<p>The Developer does not collect any information that can identify you, such as your name, email address, address, location, or photos. There is no account registration. The only information sent to the Developer's server is described in section 3, Daily Twenty leaderboard.</p>
 
 <h2>2. Information stored on your device</h2>
 <p>The App stores the following information only on your device, as needed to play:</p>
@@ -75,10 +88,23 @@ Ryohei Sakai：<a href="mailto:ryohei.dev.support@gmail.com">ryohei.dev.support@
   <li>How many rounds you played today, and rounds earned by watching ads</li>
   <li>Whether the purchase has been made</li>
   <li>Settings (tile font, sound, vibration, auto-play options) and whether the how-to-play guide has been shown</li>
+  <li>The per-device number, name, and title used for the leaderboard</li>
 </ul>
 <p>Deleting the App removes all of this information from your device.</p>
 
-<h2>3. Advertising (Google AdMob)</h2>
+<h2>3. Daily Twenty leaderboard</h2>
+<p>In Daily Twenty (今日の二十手), once you finish the day's first play and choose a name, you appear on a leaderboard shared by all players. The App then sends the following to the Developer's server, which runs on Cloudflare Workers, a service of Cloudflare, Inc.:</p>
+<ul>
+  <li>A per-device number (generated at random by the App; it does not identify your device or you)</li>
+  <li>The name shown on the leaderboard (two words chosen from the App's words) and a title (chosen from your achievements)</li>
+  <li>Your moves that day (which tiles you swapped) and the date</li>
+  <li>The version of the App's dictionary</li>
+</ul>
+<p>The server recounts your score and words from your moves and adds you to the leaderboard. Your name, title, score, words, and the number of days in a row you appeared are shown to other users who open the leaderboard (words are shown only after that day is over). Your name and moves are not sent until you choose a name (opening the leaderboard sends only the per-device number and the date, to show the board).</p>
+<p>Cloudflare may receive connection information such as your IP address. The Developer does not store IP addresses in the leaderboard records. See the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a> for how Cloudflare handles information.</p>
+<p>To have your leaderboard records deleted, contact the address below with the name you used and the dates you appeared.</p>
+
+<h2>4. Advertising (Google AdMob)</h2>
 <p>When you choose to watch an ad to play another round, the App shows a video ad from Google AdMob, a service of Google LLC. To do so, the App prepares the Google Mobile Ads SDK at launch and loads ads. Google may receive information such as your IP address, device and OS type, information about the App, ad impressions and interactions, and diagnostics.</p>
 <ul>
   <li>The App requests non-personalized ads.</li>
@@ -87,22 +113,22 @@ Ryohei Sakai：<a href="mailto:ryohei.dev.support@gmail.com">ryohei.dev.support@
 </ul>
 <p>See <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-<h2>4. In-app purchases</h2>
+<h2>5. In-app purchases</h2>
 <p>Purchases and restores are processed through Apple's App Store, and any information involved is handled by Apple in accordance with Apple's Privacy Policy. The Developer does not receive any payment information.</p>
 
-<h2>5. Word reports and external sites</h2>
+<h2>6. Word reports and external sites</h2>
 <p>"単語を報告" (Report a word) opens a page on GitHub, a service of GitHub, Inc. What you submit there becomes public and is handled under GitHub's privacy policy. The App also contains links to external websites, such as sources and the published word data.</p>
 
-<h2>6. Camera, microphone, photos, and location</h2>
+<h2>7. Camera, microphone, photos, and location</h2>
 <p>The App does not use the camera, microphone, photos, or location.</p>
 
-<h2>7. Children's privacy</h2>
+<h2>8. Children's privacy</h2>
 <p>The App is not directed primarily at children, and the Developer does not knowingly collect information from children.</p>
 
-<h2>8. Changes to this policy</h2>
+<h2>9. Changes to this policy</h2>
 <p>If this policy changes, the updated policy and its date will be posted on this page.</p>
 
-<h2>9. Contact</h2>
+<h2>10. Contact</h2>
 <p>For questions about how the App handles information, please contact:<br>
 Ryohei Sakai: <a href="mailto:ryohei.dev.support@gmail.com">ryohei.dev.support@gmail.com</a></p>
 </section>
