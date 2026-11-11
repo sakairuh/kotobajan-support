@@ -15,11 +15,11 @@
 </header>
 
 <section class="lang" lang="ja">
-<p class="updated">制定日：2026年10月24日　改定日：2026年11月9日</p>
+<p class="updated">制定日：2026年10月24日　改定日：2026年11月11日</p>
 <p>「ことば雀」（以下「本アプリ」）は、個人開発者の Ryohei Sakai（以下「開発者」）が提供する、ひらがなの牌で単語を作る麻雀ゲームです。本アプリにおける情報の取り扱いについて、以下のとおり定めます。</p>
 
 <h2>1. 開発者が収集する情報</h2>
-<p>開発者は、氏名、メールアドレス、住所、位置情報、写真など、利用者を特定できる情報を収集しません。アカウントの登録もありません。開発者のサーバーに送られるのは、次の「3. 今日の二十手と早並べの順位表」に書いた情報だけです。</p>
+<p>開発者は、氏名、メールアドレス、住所、位置情報、写真など、利用者を特定できる情報を収集しません。アカウントの登録もありません。開発者のサーバーに送られるのは、次の「3. 今日の二十手と早並べの順位表」と「4. 友だちと対戦」に書いた情報だけです。</p>
 
 <h2>2. 端末の中に保存する情報</h2>
 <p>本アプリは、遊ぶために必要な次の情報を、お使いの端末の中にだけ保存します。</p>
@@ -44,36 +44,47 @@
 <p>通信のとき、Cloudflare は IP アドレスなどの通信の情報を受け取ることがあります。開発者は、IP アドレスを順位表の記録に保存しません。Cloudflare による情報の取り扱いは、<a href="https://www.cloudflare.com/ja-jp/privacypolicy/">Cloudflare のプライバシーポリシー</a> をご覧ください。</p>
 <p>順位表の記録の削除を希望する場合は、順位表に出した名前と、載った日を添えて、下のお問い合わせ先までご連絡ください。</p>
 
-<h2>4. 広告</h2>
+<h2>4. 友だちと対戦</h2>
+<p>本アプリの「友だちと対戦」では、合言葉の部屋に集まって対局します。部屋を作る・入る・対局するとき、本アプリは開発者のサーバー（Cloudflare Workers）に次の情報を送ります。</p>
+<ul>
+  <li>端末ごとの番号と、名前（順位表と同じもの）</li>
+  <li>対局の操作（牌の並べ替え、捨てた牌、ロン・チー・リーチなど）</li>
+  <li>部屋を作るときだけ、買い切りの購入の記録（App Store が署名したもの。取引の番号・購入日・アプリと商品の ID・ストアの国などが入っています。支払いの情報は入っていません）</li>
+</ul>
+<p>名前は、同じ部屋の人に表示されます。チャットなど、自由に文を書いて送る機能はありません。部屋と対局の記録は、対局が終わってから、または誰もいなくなってから、しばらくして消えます（遅くとも30分ほど）。</p>
+<p>サーバーは、購入の記録が Apple の署名したものかを確かめた後、最初の取引の番号から作った値（元の番号には戻せないもの）と端末ごとの番号だけを保存します。1つの購入で部屋を作れる端末の数を数えるためです。購入の記録そのものは保存しません。</p>
+<p>合言葉を当てようとする試みを防ぐため、Cloudflare が IP アドレスごとに、部屋を作る・入る回数を数えます。開発者は IP アドレスを保存しません。</p>
+
+<h2>5. 広告</h2>
 <p>本アプリは、バージョン1.8から広告を表示しません。広告の仕組み（Google AdMob）も入っていません。バージョン1.7までは、利用者が選んだときに Google AdMob の動画広告を表示する仕組みが入っていました。古いバージョンをお使いの場合は、最新のバージョンに更新してください。</p>
 
-<h2>5. アプリ内課金</h2>
-<p>買い切り（遊び放題）の購入と購入の復元は、Apple の App Store を通じて行われます。この手続きで扱われる情報は、Apple のプライバシーポリシーに従って Apple が取り扱います。開発者が支払いの情報を受け取ることはありません。</p>
+<h2>6. アプリ内課金</h2>
+<p>買い切り（遊び放題）の購入と購入の復元は、Apple の App Store を通じて行われます。この手続きで扱われる情報は、Apple のプライバシーポリシーに従って Apple が取り扱います。開発者が支払いの情報を受け取ることはありません。「友だちと対戦」で部屋を作るときに送る購入の記録については、「4. 友だちと対戦」をご覧ください。</p>
 
-<h2>6. 単語の報告と外部のサイト</h2>
+<h2>7. 単語の報告と外部のサイト</h2>
 <p>本アプリの「単語を報告」は、GitHub（GitHub, Inc. のサービス）のページを開きます。報告の内容は、利用者が GitHub で送信したときに公開され、GitHub のプライバシーポリシーに従って取り扱われます。本アプリの中には、出典や単語データの公開先など、外部の Web サイトへのリンクがあります。</p>
 
-<h2>7. カメラ・マイク・写真・位置情報</h2>
+<h2>8. カメラ・マイク・写真・位置情報</h2>
 <p>本アプリは、カメラ、マイク、写真、位置情報を使用しません。</p>
 
-<h2>8. お子さまのプライバシー</h2>
+<h2>9. お子さまのプライバシー</h2>
 <p>本アプリは、お子さまを主な対象としたアプリではありません。開発者が、お子さまから意図して情報を集めることはありません。</p>
 
-<h2>9. このポリシーの変更</h2>
+<h2>10. このポリシーの変更</h2>
 <p>このポリシーを変更する場合は、このページで変更後の内容と日付をお知らせします。</p>
 
-<h2>10. お問い合わせ</h2>
+<h2>11. お問い合わせ</h2>
 <p>本アプリの情報の取り扱いについてのお問い合わせは、次の連絡先までお願いします。<br>
 Ryohei Sakai：<a href="mailto:sukima.apps.dev@gmail.com">sukima.apps.dev@gmail.com</a></p>
 </section>
 
 <section class="lang" lang="en" id="en">
 <h1>Kotoba-jan <span>Privacy Policy</span></h1>
-<p class="updated">Effective date: October 24, 2026 · Last updated: November 9, 2026</p>
+<p class="updated">Effective date: October 24, 2026 · Last updated: November 11, 2026</p>
 <p>Kotoba-jan (ことば雀, "the App") is a mahjong game played with hiragana tiles, provided by Ryohei Sakai, an individual developer ("the Developer"). This policy explains how the App handles information.</p>
 
 <h2>1. Information the Developer collects</h2>
-<p>The Developer does not collect any information that can identify you, such as your name, email address, address, location, or photos. There is no account registration. The only information sent to the Developer's server is described in section 3, Daily Twenty and Speed Words leaderboards.</p>
+<p>The Developer does not collect any information that can identify you, such as your name, email address, address, location, or photos. There is no account registration. The only information sent to the Developer's server is described in section 3, Daily Twenty and Speed Words leaderboards, and section 4, Play with Friends.</p>
 
 <h2>2. Information stored on your device</h2>
 <p>The App stores the following information only on your device, as needed to play:</p>
@@ -98,25 +109,36 @@ Ryohei Sakai：<a href="mailto:sukima.apps.dev@gmail.com">sukima.apps.dev@gmail.
 <p>Cloudflare may receive connection information such as your IP address. The Developer does not store IP addresses in the leaderboard records. See the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a> for how Cloudflare handles information.</p>
 <p>To have your leaderboard records deleted, contact the address below with the name you used and the dates you appeared.</p>
 
-<h2>4. Advertising</h2>
+<h2>4. Play with Friends</h2>
+<p>In Play with Friends (友だちと対戦), players meet in a room with a passphrase and play a match. When you create or join a room and play, the App sends the following to the Developer's server (Cloudflare Workers):</p>
+<ul>
+  <li>The per-device number and your name (the same one used on the leaderboards)</li>
+  <li>Your moves in the match (rearranging tiles, discards, and calls such as ron, chi, and riichi)</li>
+  <li>Only when you create a room, the record of your Unlimited Play purchase (signed by the App Store; it contains the transaction number, purchase date, app and product IDs, storefront country, and similar details, but no payment information)</li>
+</ul>
+<p>Your name is shown to the other players in the room. There is no chat or other way to send free text. Rooms and their matches are deleted a while after the match ends or everyone leaves (within about 30 minutes).</p>
+<p>After confirming that the purchase record is signed by Apple, the server keeps only a value derived from the original transaction number (which cannot be turned back into the number) and the per-device number, to count how many devices create rooms with one purchase. The purchase record itself is not stored.</p>
+<p>To prevent attempts to guess passphrases, Cloudflare counts how often each IP address creates or joins rooms. The Developer does not store IP addresses.</p>
+
+<h2>5. Advertising</h2>
 <p>Since version 1.8, the App shows no ads and does not include any advertising SDK. Up to version 1.7, the App included Google AdMob to show a video ad when you chose to watch one. If you are using an older version, please update to the latest version.</p>
 
-<h2>5. In-app purchases</h2>
-<p>Purchases and restores are processed through Apple's App Store, and any information involved is handled by Apple in accordance with Apple's Privacy Policy. The Developer does not receive any payment information.</p>
+<h2>6. In-app purchases</h2>
+<p>Purchases and restores are processed through Apple's App Store, and any information involved is handled by Apple in accordance with Apple's Privacy Policy. The Developer does not receive any payment information. For the purchase record sent when you create a room in Play with Friends, see section 4.</p>
 
-<h2>6. Word reports and external sites</h2>
+<h2>7. Word reports and external sites</h2>
 <p>"単語を報告" (Report a word) opens a page on GitHub, a service of GitHub, Inc. What you submit there becomes public and is handled under GitHub's privacy policy. The App also contains links to external websites, such as sources and the published word data.</p>
 
-<h2>7. Camera, microphone, photos, and location</h2>
+<h2>8. Camera, microphone, photos, and location</h2>
 <p>The App does not use the camera, microphone, photos, or location.</p>
 
-<h2>8. Children's privacy</h2>
+<h2>9. Children's privacy</h2>
 <p>The App is not directed primarily at children, and the Developer does not knowingly collect information from children.</p>
 
-<h2>9. Changes to this policy</h2>
+<h2>10. Changes to this policy</h2>
 <p>If this policy changes, the updated policy and its date will be posted on this page.</p>
 
-<h2>10. Contact</h2>
+<h2>11. Contact</h2>
 <p>For questions about how the App handles information, please contact:<br>
 Ryohei Sakai: <a href="mailto:sukima.apps.dev@gmail.com">sukima.apps.dev@gmail.com</a></p>
 </section>
